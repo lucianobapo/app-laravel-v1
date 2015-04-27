@@ -30,8 +30,8 @@ class FooController extends Controller {
     public function foo() {
 //        dd(trans('email.userCreatedSubject'));
 //        dd(Lang::get('pagination.next'));
-//        return $repository->get();
-        return $this->article->getLatestPublished($this->cache);
+        return $this->repository->get();
+        //return $this->article->getLatestPublished($this->cache);
 	}
 
 }
