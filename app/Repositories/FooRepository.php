@@ -22,7 +22,7 @@ class FooRepository {
         $mail = Mail::failures();
         dd($mail);
         //\Illuminate\Html\FormBuilder::hasMacro()
-        Validator::make();
+//        Validator::make();
         //return $ret->listar();
         //return ['array', 'of'];
 

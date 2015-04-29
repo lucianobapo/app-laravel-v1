@@ -21,19 +21,12 @@
 Route:get('foo', 'FooController@foo');
 //Route:get('foo', 'FooController@foo')->after('log');
 
+// Temporário
 Route::get('relatorios', ['as'=>'relatorios.index', 'uses'=>'RelatoriosController@index']);
 
 Route::get('/', ['as'=>'index', 'uses'=>'WelcomeController@index']);
 
 Route::get('home', ['as'=>'home.index', 'uses'=>'HomeController@index']);
-
-//Route::controller('auth', 'Auth\AuthController', [
-//    'names' => [
-//        'auth/login'=>'auth.login',
-//        'register'=>'auth.register',
-//        'logout'=>'auth.logout',
-//    ],
-//]);
 
 Route::controllers([
     'auth' => 'Auth\AuthController',
@@ -70,3 +63,22 @@ Route::resource('articles','ArticlesController', [
 ]);
 
 Route::get('tags/{tags}', ['as'=>'tags.show', 'uses'=>'TagsController@show']);
+
+Route::resource('sharedCurrencies','SharedCurrenciesController', [
+    'names' => [
+        'index'=>'sharedCurrencies.index',
+        'show'=>'sharedCurrencies.show',
+//        'create'=>'articles.create',
+//        'store'=>'articles.store',
+//        'edit'=>'articles.edit',
+//        'update'=>'articles.update',
+    ],
+    'only'=>[
+        'index',
+        'show',
+//        'create',
+//        'store',
+//        'edit',
+//        'update',
+    ],
+]);

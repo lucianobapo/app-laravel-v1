@@ -21,6 +21,7 @@
                 {{--<li>{!! link_to('/') !!}</li>--}}
                 <li>{!! link_to_route('articles.index', 'List of Articles') !!}</li>
                 <li>{!! link_to_route('articles.create', 'Create an Article') !!}</li>
+                <li>{!! link_to_route('sharedCurrencies.index', 'Shared Currencies') !!}</li>
 
                 {{--<li><a href="{{ url('/articles/create') }}">Create an Article</a></li>--}}
 

@@ -18,6 +18,7 @@ class CreateSharedCurrenciesTable extends Migration {
 			$table->timestamps();
 
             $table->string('nome_universal', 3);
+            $table->string('descricao');
 		});
 
 //        Schema::create('orders_has_shared_currencies',function(Blueprint $table){

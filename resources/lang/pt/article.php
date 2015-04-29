@@ -19,5 +19,5 @@ return array(
         'title' => 'Título',
         'body' => 'Texto',
         'published_at' => 'Publicado Em',
-    ), // attributes,
+    ), // attributes
 );

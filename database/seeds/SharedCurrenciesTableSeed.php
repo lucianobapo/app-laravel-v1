@@ -10,7 +10,7 @@ class SharedCurrenciesTableSeeder extends Seeder
     public function run()
     {
         $faker = Faker\Factory::create();
-        //$faker->addProvider(new \Faker\Provider\Miscellaneous($faker));
+        $faker->addProvider(new \Faker\Provider\Miscellaneous($faker));
 //        $faker->seed(1234);
 
         if (DB::connection()->getName()=='mysql')
@@ -19,7 +19,9 @@ class SharedCurrenciesTableSeeder extends Seeder
 
         foreach (range(1, 10) as $index) {
             SharedCurrency::create([
-                'nome_universal' => strtoupper($faker->word(3)),
+                'nome_universal' => $faker->currencyCode(),
+//                'nome_universal' => strtoupper($faker->word(3)),
+                'descricao' => $faker->sentence(3),
             ]);
         }
 
