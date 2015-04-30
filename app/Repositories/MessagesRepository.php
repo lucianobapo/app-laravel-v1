@@ -7,7 +7,7 @@ class MessagesRepository{
 
     private $fields= [];
 
-//    public function __contstruct(Array $fields){
+//    public function __construct(Array $fields){
 //        $this->fields = $fields;
 //    }
 

@@ -34,4 +34,20 @@ return [
 		'secret' => '',
 	],
 
+    /**
+     * Social OAuth
+     */
+    'github' => [
+        'client_id' => env('GITHUB_CLIENT_ID', 'your-github-app-id'),
+        'client_secret' => env('GITHUB_CLIENT_SECRET', 'your-github-app-secret'),
+        'redirect' => env('GITHUB_REDIRECT', 'http://your-callback-url'),
+    ],
+
+    'twitter' => [
+        'consumer_key' => env('TWITTER_CONSUMER_KEY', 'consumer_key'),
+        'consumer_secret' => env('TWITTER_CONSUMER_SECRET', 'consumer_secret'),
+        'token' => env('TWITTER_TOKEN', 'token'),
+        'token_secret' => env('TWITTER_TOKEN_SECRET', 'token_secret'),
+    ],
+
 ];

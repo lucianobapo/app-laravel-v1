@@ -151,7 +151,9 @@ return [
 
         'Laracasts\Flash\FlashServiceProvider',
         'App\Providers\ViewComposerServiceProvider',
+        'App\Providers\TwitterServiceProvider',
         'Barryvdh\Debugbar\ServiceProvider',
+        'Laravel\Socialite\SocialiteServiceProvider',
         //'Fitztrev\LaravelHtmlMinify\LaravelHtmlMinifyServiceProvider',
 	],
 
@@ -206,6 +208,9 @@ return [
 
         'Flash'      => 'Laracasts\Flash\Flash',
         'Debugbar' => 'Barryvdh\Debugbar\Facade',
+        'Twitter' => '\App\Facades\TwitterFacade',
+        'Socialite' => 'Laravel\Socialite\Facades\Socialite',
+
 
         /**
          * Models mapping aliases.

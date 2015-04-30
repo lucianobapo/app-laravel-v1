@@ -11,6 +11,26 @@
 |
 */
 
+Route::get('twitter/{query}', function($query) {
+    $tweets = Twitter::search($query);
+    dd($tweets);
+//    return Twitter::search($query);
+
+});
+
+Route::get('github', function() {
+    if (Auth::guest()) return 'Hi guest. '.link_to('login', 'Login With Github!');
+    else return 'Welcome back, '.Auth::user()->name;
+});
+
+Route::get('login', 'SocialAuthController@login');
+
+Route::get('github/{username}', function($username) {
+    $client = new \Guzzle\Http\Client('https://api.github.com');
+    $response = $client->get("users/$username")->send();
+    dd($response->json());
+});
+
 //after filter
 //Route::filter('log', function($route,$request,$response){
 //    //var_dump($route);
